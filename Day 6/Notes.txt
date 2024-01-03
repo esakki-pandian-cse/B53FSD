@@ -1,0 +1,94 @@
+Contents:
+Understanding the basics of prototype
+What is classes in js?
+constructor
+need of setters/getters
+use of this key word in classes
+
+OOPS:- Object Oriented Programming
+//Javascript has inherited some features from Java
+//main pillars of java 
+
+=> Encapsulation:- Hiding the implementation details.In which one thing is included with other 
+thing so that inclusive things will not appear.
+example:- whatsapp
+
+=> Polymorphism :- a way to achieve a single action in different ways.
+example:- myself.
+
+=> Inheritance:- parent chiild relationship.In which class take all the characteristics
+of parent class.(child=>inherits=>parent)
+example:- gene,dna
+
+=> Classes and Objects :-
+===> Class:- It is a collection of properties,methods and objects.
+===> class is defined by using the class keyword
+syntax:-
+class classname{
+    //properties
+    //methods
+    //objects
+}
+example:-
+class movie{
+    //rating,review,actor,actress,director,genere,music director,dop
+}
+
+==>Objects:- It is called as the real time entity.(Touch and feel)
+==>objects are specific to the class.
+syntax:- 
+var/let/const objectname = new Classname();
+new:- new is a keyword used to create an instance of the object.
+
+==>Constructor:- to store the value inside the object.Automatically called when class is created.
+==>this:- It is the temporary keyword which is pointing to the freshly created objects.
+-------------------------
+Example:-Car
+
+class Car{
+    constructor(brand,color)
+    {
+      this.brand = brand; //key =value // c(brand) =>obj(brand) //Audi
+      this.color = color; //black
+    }
+}
+var obj = new Car("Audi","Black")
+console.log(obj.color);
+console.log(obj.brand);
+
+---------------------------------------
+task:- 
+class Person => name,age,gender,salary.
+
+//! class with methods
+ class Car{
+    drive(){
+    console.log("Driving the car");
+    }
+    brake(){
+    console.log("Applying the brake");
+    }
+ }
+ const car1 = new Car();
+car1.drive();
+car1.brake();
+-----------------------
+ setters/getters:-
+ get => get user data
+ => binds an object property to a function when the property is accepted.
+ set => set user data
+ => binds an object property to a function when the property is assigned with a value.
+
+//example:-
+const users ={
+    get name(){
+        console.log("getting a name");
+        return this._name;
+    }
+    set name(n){
+      console.log("setting a name"+" "+n);
+      this._name = n;
+    }
+}
+users.name = "John";
+console.log(users.name);
