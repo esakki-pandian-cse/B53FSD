@@ -1,0 +1,80 @@
+Contents:-
+Introduction to Array   (Already done recap)
+Array and JSON iteration  (Objects and JSON)
+XMLHttpRequest  (API and Function basic)
+Hoisting & scope  (Will see in roadmap day 5)
+
+
+Introduction to Array:-
+
+=> collection of datatypes
+=> it will be in the sequence order
+=> enclosed within []
+=> index always starts with 0
+=> to print the value inside the array we have to use
+arrayname[indexvalue]
+=>to find the length dynamically we have to use
+arrayname.length
+=> to find the last index we have to use 
+arrayname.length-1
+
+Introduction to Objects:- 
+=> Objects are structure with Key Value pairs
+=> Objects dont have index
+syntax:- 
+var/let/const objName = {
+    KeyName: Value
+}
+=> Accessing the element inside the object 
+=> we can access the element by using KeyName
+=> 2 types of Accessing (Dot method and Box method)
+=>Dot method
+syntax:-
+objectName.KeyName
+=> Box method
+syntax:-
+objectName["KeyName"]
+=> Without keys we dont have values
+
+====> example:-
+person details (name,age,gender,year,city)
+refer script file
+//Using dot method
+// console.log(personDetails.Age);
+// console.log(personDetails.City);
+// console.log(personDetails.Gender);
+// console.log(personDetails.Name);
+// console.log(personDetails.Year);
+//using Box method
+// console.log(personDetails["Age"]);
+// console.log(personDetails["City"]);
+// console.log(personDetails["Gender"]);
+// console.log(personDetails["Name"]);
+// console.log(personDetails["Year"]);
+//for in loop
+//syntax:-
+//for(var key in objectname)
+//{
+    //block of codes
+//}
+
+=>Adding a new element in the object:-
+syntax:- objectName.KeyName=value
+=>Updating a existing element in the object:-
+syntax:-objectName.KeyName=value
+=>Deleting the element in the object:-
+syntax:- delete objectName.keyname
+=> can we give array inside the objects? if yes how to print?
+yes using looping
+
+Introduction JSON
+=> JSON(JavaScript Object Notation)
+syntax:-
+var/let/const objectName={
+    "key":"value"
+}
+example:-
+refer script js
+
+//Array of objects
+refer script js

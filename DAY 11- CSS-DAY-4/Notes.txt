@@ -1,0 +1,27 @@
+Position
+Media Queries
+
+Position:- 
+1.static
+2.relative
+3.absolute
+4.fixed
+5.sticky
+
+Media Queries:-
+ Breakpoints:-
+  Mobile devices:- 320px-480px
+  Ipads and tablets:- 481px-768px
+  Laptops:- 769px-1024px
+  large screens:-1025px-1200px
+
+=> 3 types of media queries.
+=> screens :- to display
+=> print :- to print the page
+=> speech :- screen readers
+
+syntax:- 
+@media screen/print/speech/all and(selectors){
+
+}
+selectors:- your resolution (2 types => max-width and min-width)

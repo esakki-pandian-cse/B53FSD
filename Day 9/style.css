@@ -1,0 +1,21 @@
+body{
+    background-color: palegreen;
+}
+
+table ,td{
+    text-align: center;
+    background-color: chocolate;
+    height: 80px;
+    width: 700px;
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin-left: 400px;
+    margin-top: 50px;
+ 
+}
+caption{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: x-large;
+    color: red;
+}

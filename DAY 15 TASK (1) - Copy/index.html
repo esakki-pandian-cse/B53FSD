@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Forms & Tables</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title">DOM Manipulation with Forms</h1>
+      <p id="description">
+        Need to generate the form details to the table by clicking the submit
+        button
+      </p>
+      <!-- Form for input -->
+      <form id="form" class="mt-5">
+        <div class="row col-12">
+          <div class="form-group col-md-6">
+            <label for="first-name"><strong>First Name</strong></label>
+            <input
+              type="text"
+              placeholder="Enter here"
+              class="form-control"
+              id="first-name"
+              required
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="last-name"><strong>Last Name</strong></label>
+            <input
+              type="text"
+              placeholder="Enter here"
+              class="form-control"
+              id="last-name"
+              required
+            />
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="form-group col-6">
+            <label for="gender"><strong>Gender</strong></label>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                value="Male"
+                id="male"
+              />
+              <label class="form-check-label" for="male">Male</label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                value="Female"
+                id="female"
+              />
+              <label class="form-check-label" for="female">Female</label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                value="Others"
+                id="others"
+              />
+              <label class="form-check-label" for="others">Others</label>
+            </div>
+          </div>
+          <div class="form-group col-6">
+            <label for="food"
+              ><strong>Choice of Food</strong> (Select at least 2) -(Hold Shift
+              key to select multiple)</label
+            >
+            <select multiple class="form-control" id="food" required>
+              <option value="pizza">Pizza</option>
+              <option value="burger">Burger</option>
+              <option value="pasta">Pasta</option>
+              <option value="salad">Salad</option>
+              <option value="sushi">Sushi</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group col-md-12 mt-3">
+          <label for="address"><strong>Address</strong></label>
+          <textarea
+            class="form-control"
+            id="address"
+            rows="3"
+            placeholder="Enter here"
+            required
+          ></textarea>
+        </div>
+        <div class="row col-12 mt-3">
+          <div class="form-group col-md-4">
+            <label for="state"><strong>State</strong></label>
+            <input
+              type="text"
+              placeholder="Enter here"
+              class="form-control"
+              id="state"
+              required
+            />
+          </div>
+          <div class="form-group col-md-4">
+            <label for="country"><strong>Country</strong></label>
+            <input
+              type="text"
+              placeholder="Enter here"
+              class="form-control"
+              id="country"
+              required
+            />
+          </div>
+          <div class="form-group col-md-4">
+            <label for="pincode"><strong>Pincode</strong></label>
+            <input
+              type="text"
+              placeholder="Enter here"
+              class="form-control"
+              id="pincode"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-group mt-3">
+          <button
+            type="button"
+            id="submit"
+            class="btn btn-primary"
+            onclick="submitForm()"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+
+      <hr />
+
+      <!-- Tables for output -->
+      <table
+        class="table table-striped table-hover table-responsive-md align-middle"
+        id="table"
+      >
+        <div class="text-center output"><strong>Output tabel</strong></div>
+        <thead>
+          <tr>
+            <th scope="col">Firstname</th>
+            <th scope="col">Lastname</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Foods</th>
+            <th scope="col">Address</th>
+            <th scope="col">State</th>
+            <th scope="col">Country</th>
+            <th scope="col">Pincode</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <script src="./script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+  </body>
+</html>
