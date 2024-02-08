@@ -4,10 +4,10 @@ const colors = [
   "aqua",
   "red",
   "blueviolet",
-  "charreuse",
+  "chartreuse",
   "coral",
   "gold",
-  "green",
+  "maroon",
   "hotpink",
 ];
 const colorList = [...colors,...colors]
@@ -23,5 +23,34 @@ let activeBox = null;
 let waitingTime = false;
 // box automaticah thirumpurathu than waiting time
 
+// function to display the boxes in the webpage
+function buildBoxes(color){
+  const element = document.createElement("div");
+  element.classList.add("box");
+  element.setAttribute("data-color", color);
+
+// adding event listeners for click event
+element.addEventListener("click",()=>{
+  if(waitingTime){
+    return
+  }
+  element.style.backgroundColor = color
+})
+
+
+  return element;
+} 
 
 // building the boxes for the game 
+for(let i = 0; i<boxLength; i++){
+  // this is the place where the colors are randomly displayed 
+  const randomIndex =  Math.floor(Math.random() * colorList.length);
+  const color = colorList[randomIndex];
+  const box = buildBoxes(color);
+
+// using splice method to avoid 3 repeated calls 
+  colorList.splice(randomIndex,1);
+
+//  console.log(color);
+boxes.append(box);
+}

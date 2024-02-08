@@ -13,6 +13,6 @@ body{
 .box{
     height: 100px;
     background-color: #636361;
-    border: 3px solid aliceblue;
+    border: 4px solid aliceblue;
     cursor: pointer;
 }
