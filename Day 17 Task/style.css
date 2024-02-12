@@ -1,0 +1,7 @@
+body{
+    background-color: black !important;
+}
+
+#title, #description{
+    color: white;
+}
