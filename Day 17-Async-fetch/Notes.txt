@@ -1,0 +1,38 @@
+//fetch
+
+==> before fetch we have used the xmlhttprequest to get the data from the server.
+
+var request = new XMLHttpRequest();
+request.open("GET","https://restcountries.com/v3.1/all",true)
+request.send();
+request.onload = function(){
+    var data = request.response;
+   var result = JSON.parse(data);
+    console.log(result);
+    for(var i=0;i<result.length;i++){
+        console.log(result[i].area);
+    }
+}
+
+//=========>after fetch
+=> It is an alternative for xmlhttprequest
+=> fetch takes the API as a parameter
+syntax:- 
+fetch("url")
+=> fetch returns a promise
+=> the body section of the fetch is a readble stream.
+=> to convert the readable stream to objectjson we need to use .json() method
+=> .json() :- it is a method used to convert body data into a k:v structure
+***Important :- use .then and .catch to handle promise.
+
+//card
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
